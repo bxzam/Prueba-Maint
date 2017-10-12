@@ -83,13 +83,15 @@ namespace PruebaMaintBZ
 		{
 			foreach ( Control x in Controls )         //Realiza la operacion por cada control que hay en el formulario.
 			{
-				while ( x is TextBox )                //Ejecuta la operacion solo si el control es de tipo TextBox.
+				if ( x is TextBox )                //Ejecuta la operacion solo si el control es de tipo TextBox.
 				{
 					if ( x.Text == string.Empty )
 					{
 						return false;
 					}
+
 				}
+                
 			}
 			return true;
 		}
